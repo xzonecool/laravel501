@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome',['name' => 'foo', 'greeting'=> '안녕하세요',]);
-
-});
+Route::get('/', 'WelcomeController@index');
+Route::resource('article', 'ArticlesController');
 
